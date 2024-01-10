@@ -1,0 +1,90 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 233, in script
+    pause
+  File "renpy/common/000statements.rpy", line 461, in execute_pause
+    renpy.pause()
+  File "game/script.rpy", line 177, in execute
+    screen msw_screen(ms):
+  File "game/script.rpy", line 177, in execute
+    screen msw_screen(ms):
+  File "game/script.rpy", line 184, in execute
+    frame:
+  File "game/script.rpy", line 189, in execute
+    fixed:
+  File "game/script.rpy", line 194, in execute
+    for i in range(len(ms.table.tiles)):
+  File "game/script.rpy", line 196, in execute
+    for j in range(len(ms.table.tiles[i])):
+  File "game/script.rpy", line 198, in execute
+    button:
+  File "game/script.rpy", line 200, in execute
+    if not ms.table.tiles[i][j].opened:
+  File "game/script.rpy", line 214, in execute
+    if ms.tiles[i][j].num:
+  File "game/script.rpy", line 214, in <module>
+    if ms.tiles[i][j].num:
+AttributeError: 'MinesweeperGame' object has no attribute 'tiles'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 233, in script
+    pause
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 461, in execute_pause
+    renpy.pause()
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\exports.py", line 1637, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay, pause_modal=modal)
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3499, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3969, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 605, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 605, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 605, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 3969, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\Bogdan\Downloads\renpy-8.0.3-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 177, in execute
+    screen msw_screen(ms):
+  File "game/script.rpy", line 177, in execute
+    screen msw_screen(ms):
+  File "game/script.rpy", line 184, in execute
+    frame:
+  File "game/script.rpy", line 189, in execute
+    fixed:
+  File "game/script.rpy", line 194, in execute
+    for i in range(len(ms.table.tiles)):
+  File "game/script.rpy", line 196, in execute
+    for j in range(len(ms.table.tiles[i])):
+  File "game/script.rpy", line 198, in execute
+    button:
+  File "game/script.rpy", line 200, in execute
+    if not ms.table.tiles[i][j].opened:
+  File "game/script.rpy", line 214, in execute
+    if ms.tiles[i][j].num:
+  File "game/script.rpy", line 214, in <module>
+    if ms.tiles[i][j].num:
+AttributeError: 'MinesweeperGame' object has no attribute 'tiles'
+
+Windows-10-10.0.19042 AMD64
+Ren'Py 8.1.0.23051307
+Minesweeper 1.0
+Sat Oct 21 18:51:43 2023
